@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/assignmentCellContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/completeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/checkbox"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:src="@drawable/unchecked_24"
+            app:iconTint="#DA70D6"/>
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/place_holder" />
+
+        <TextView
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dueTime"
+        android:text="@string/place_holder"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_gravity="center"
+        />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_below="@id/todoListRecyclerView"
+            android:onClick="onDeleteImageClick"
+            android:src="@drawable/outline_cancel_24" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
